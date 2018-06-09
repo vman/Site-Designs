@@ -7,6 +7,7 @@ using OfficeDevPnP.Core.Framework.Provisioning.Model;
 using OfficeDevPnP.Core.Framework.Provisioning.ObjectHandlers;
 using OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml;
 using System;
+using System.Configuration;
 using System.IO;
 
 namespace Office365.SiteDesigns.PnP
@@ -18,8 +19,8 @@ namespace Office365.SiteDesigns.PnP
         {
             log.Info($"C# Queue trigger function processed: {myQueueItem}");
             var authManager = new AuthenticationManager();
-            //To do: store these in a secure location.
-            var clientContext = authManager.GetAppOnlyAuthenticatedContext(myQueueItem, "009a20a5-e4ef-43cb-8b05-3a25dbd86cd3", "IxFBF7yrnV3nD29indPJWtfPun054YxFaxdvAalkvoY=");
+
+            var clientContext = authManager.GetAppOnlyAuthenticatedContext(myQueueItem, ConfigurationManager.AppSettings["ClientId"], ConfigurationManager.AppSettings["ClientSecret"]);
 
             string currentDirectory = executionContext.FunctionDirectory;
             DirectoryInfo dInfo = new DirectoryInfo(currentDirectory);
