@@ -1,0 +1,15 @@
+{
+    "$schema": "schema.json",
+    "actions": [
+        {
+            "verb": "associateExtension",
+            "title": "office-365-site-designs-sp-fx-client-side-solution",
+            "location": "ClientSideExtension.ApplicationCustomizer",
+            "clientSideComponentId": "b49e4ec0-127f-4725-87b6-d3b4530c3600",
+            "clientSideComponentProperties": "{\"Bottom\":\"Footer - added from the Site Design\"}",
+            "scope": "Site"
+        }
+    ],
+    "bindata": {},
+    "version": 1
+}
