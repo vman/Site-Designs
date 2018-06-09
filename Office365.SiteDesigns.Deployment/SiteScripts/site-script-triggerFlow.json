@@ -1,0 +1,16 @@
+{
+  "$schema": "schema.json",
+      "actions": [
+        {
+          "verb": "triggerFlow",
+          "url": "https://prod-15.westeurope.logic.azure.com:443/workflows/4333f2255f9a4326b5dc6678f11ed42f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rRifW2pulZXcMjk8QKN15ZimF_45SxrqaYyKPnYtRaM",
+          "name": "Customise Site with Microsoft PnP",
+          "parameters": {
+            "event": "Microsoft Event",
+            "product": "SharePoint"
+          }
+        }
+      ],
+          "bindata": { },
+  "version": 1
+ }
