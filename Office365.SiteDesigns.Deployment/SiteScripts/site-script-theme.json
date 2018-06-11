@@ -3,7 +3,7 @@
   "actions": [
     {
       "verb": "applyTheme",
-      "themeName": "My Custom Theme"
+      "themeName": "Deep Purple"
     }
   ],
   "bindata": {},

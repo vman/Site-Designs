@@ -29,4 +29,4 @@ $themepallette = @{
     "disabledText" = "#c8c8c8";
 }
 
-Add-SPOTheme -Name "My Custom Theme" -Palette $themepallette -IsInverted $false
+Add-SPOTheme -Name "Deep Purple" -Palette $themepallette -IsInverted $false

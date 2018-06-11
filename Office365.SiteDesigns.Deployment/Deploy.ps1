@@ -22,6 +22,9 @@ $siteScriptTheme = Add-SPOSiteScript -Title "CnC Theme Script" -Description "Add
 $siteScriptSPFxContent = Get-Content 'SiteScripts\site-script-spfxAppCustomizer.json' -Raw 
 $siteScriptSPFx = Add-SPOSiteScript -Title "CnC SPFx Script" -Description "Adds SPFx components to the site" -Content $siteScriptSPFxContent
 
+$siteScriptJoinToHubContent = Get-Content 'SiteScripts\site-script-joinToHub.json' -Raw 
+$siteScriptJoinToHub = Add-SPOSiteScript -Title "CnC Join to Hub" -Description "Join site to Hub" -Content $siteScriptJoinToHubContent
+
 
 ###Site Designs###
 #Default Site Design attached to all modern team and communication sites
@@ -36,5 +39,6 @@ Add-SPOSiteDesign -Title "CnC Basic Communication site" -WebTemplate "68" -SiteS
 #Create an advanced site design by using the theme, lists and flow site scripts
 Add-SPOSiteDesign -Title "CnC Advanced Communication site" -WebTemplate "68" -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID, $siteScriptTriggerFlow.ID -Description "CnC advanced communication site" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
 
+Add-SPOSiteDesign -Title "CnC Department site" -WebTemplate "68" -SiteScripts $siteScriptJoinToHub.ID -Description "Department site will be joined to Hub" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
 
 
