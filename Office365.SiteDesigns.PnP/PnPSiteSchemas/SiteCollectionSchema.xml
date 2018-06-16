@@ -26,7 +26,7 @@
             </pnp:Section>
             <pnp:Section Order="3" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="" Order="1" Column="1">
+                <pnp:CanvasControl WebPartType="SiteActivity" Order="1" Column="1">
                 </pnp:CanvasControl>
               </pnp:Controls>
             </pnp:Section>
