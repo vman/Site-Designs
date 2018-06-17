@@ -28,11 +28,11 @@ $siteScriptJoinToHub = Add-SPOSiteScript -Title "CnC Join to Hub" -Description "
 
 ###Site Designs###
 #Default Site Design attached to all modern team and communication sites
-Add-SPOSiteDesign -Title "CnC Theme" -WebTemplate "64" -SiteScripts $siteScriptTheme.ID -Description "CnC Site Design to apply common theme to all team sites" -IsDefault
+#Add-SPOSiteDesign -Title "CnC Theme" -WebTemplate "64" -SiteScripts $siteScriptTheme.ID -Description "CnC Site Design to apply common theme to all team sites" -IsDefault
 #Add-SPOSiteDesign -Title "CnC Theme" -WebTemplate "68" -SiteScripts $siteScriptTheme.ID -Description "CnC Site Design to apply common theme to all communication sites" -IsDefault
 
 #Create a basic site design only using the lists and theme site script.
-Add-SPOSiteDesign -Title "CnC Office 365 Group site" -WebTemplate "64" -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID -Description "CnC custom site connected to Office 365 Group" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png" -PreviewImageAltText "CnC custom site logo"
+Add-SPOSiteDesign -Title "CnC Office 365 Group site" -WebTemplate "64" -IsDefault -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID -Description "CnC custom site connected to Office 365 Group" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png" -PreviewImageAltText "CnC custom site logo"
 
 Add-SPOSiteDesign -Title "CnC Basic Communication site" -WebTemplate "68" -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID, $siteScriptSPFx.ID -Description "CnC basic communication site" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
 
