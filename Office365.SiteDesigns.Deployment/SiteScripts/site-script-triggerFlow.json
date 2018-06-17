@@ -7,7 +7,9 @@
           "name": "Customise Site with Microsoft PnP",
           "parameters": {
             "event": "Microsoft Event",
-            "product": "SharePoint"
+            "product": "SharePoint",
+            "siteType": "CnC Advanced Communication site",
+            "customMessage": "Item added from Flow!"
           }
         }
       ],
