@@ -2,6 +2,10 @@
     "$schema": "schema.json",
     "actions": [
         {
+            "verb": "installSolution",
+            "id": "ec530609-85fa-4b7c-9262-1a8be3187bcd"
+        },
+        {
             "verb": "associateExtension",
             "title": "office-365-site-designs-sp-fx-client-side-solution",
             "location": "ClientSideExtension.ApplicationCustomizer",

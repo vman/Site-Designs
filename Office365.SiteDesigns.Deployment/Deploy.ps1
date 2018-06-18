@@ -19,7 +19,7 @@ $siteScriptTriggerFlow = Add-SPOSiteScript -Title "CnC Trigger Flow" -Descriptio
 $siteScriptThemeContent = Get-Content 'SiteScripts\site-script-theme.json' -Raw 
 $siteScriptTheme = Add-SPOSiteScript -Title "CnC Theme Script" -Description "Adds a custom theme to the site" -Content $siteScriptThemeContent
 
-$siteScriptSPFxContent = Get-Content 'SiteScripts\site-script-spfxAppCustomizer.json' -Raw 
+$siteScriptSPFxContent = Get-Content 'SiteScripts\site-script-spfxComponents.json' -Raw 
 $siteScriptSPFx = Add-SPOSiteScript -Title "CnC SPFx Script" -Description "Adds SPFx components to the site" -Content $siteScriptSPFxContent
 
 $siteScriptJoinToHubContent = Get-Content 'SiteScripts\site-script-joinToHub.json' -Raw 
