@@ -66,7 +66,7 @@ export default class FooterApplicationCustomizer
         if (this._bottomPlaceholder.domElement) {
           this._bottomPlaceholder.domElement.innerHTML = `
         <div class="${styles.app}">
-          <div class="ms-bgColor-themeDark ms-fontColor-white ${styles.bottom}">
+          <div class="ms-fontColor-white ${styles.bottom}">
             <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${escape(bottomString)}
           </div>
         </div>`;
