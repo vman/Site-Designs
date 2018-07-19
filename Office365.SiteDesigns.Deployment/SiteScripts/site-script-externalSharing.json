@@ -3,7 +3,7 @@
   "actions": [
     {
       "verb": "setSiteExternalSharingCapability",
-      "capability": "ExistingExternalUserSharingOnly"
+      "capability": "Disabled"
     }
   ],
   "bindata": {},
