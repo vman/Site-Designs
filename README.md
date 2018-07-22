@@ -14,7 +14,7 @@ Using the `Invoke-SPOSiteDesign` cmdlet to apply a Site Design to an existing mo
 
 ### 4. Join site to a Hub site using a Site Design
 
-Using the `joinHubSite` action to join the current site to a Hub site on the tenant.
+Configure a Hub site on the tenant using the `Register-SPOHubSite` cmdlet and join the current site to a Hub site using the `joinHubSite` site design action
 
 ### 5. Sample SPFx solutions used to deploy from Site Designs
 
