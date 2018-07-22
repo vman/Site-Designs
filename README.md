@@ -19,3 +19,7 @@ Using the `joinHubSite` action to join the current site to a Hub site on the ten
 ### 5. Sample SPFx solutions used to deploy from Site Designs
 
 Hello world SPFx web part and Application Customizer (for footer) which is deployed to a site using the `installSolution` and `associateExtension` actions in a Site Design.
+
+### 6. Modern themes
+
+Creating and deploying modern themes with the `Add-SPOTheme` cmdlet
