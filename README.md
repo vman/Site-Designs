@@ -10,7 +10,7 @@ Code for using the `triggerFlow` action in a Site Design to call a Flow and pass
 
 ### 3. Apply Site Design to existing modern site
 
-Using the `Invoke-SPOSiteDesign` cmdlet to apply a Site Design to an existing modern site.
+Using the `Invoke-SPOSiteDesign` cmdlet to apply a Site Design to an existing modern or classic site.
 
 ### 4. Join site to a Hub site using a Site Design
 
