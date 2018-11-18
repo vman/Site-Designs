@@ -3,8 +3,8 @@ $userCredential = Get-StoredCredential -Target "vrdmn.sharepoint.com"
 Connect-SPOService -Url "https://vrdmn-admin.sharepoint.com" -Credential $userCredential
 
 #Cleanup any existing site scripts and site designs
-#Get-SPOSiteDesign | Remove-SPOSiteDesign
-#Get-SPOSiteScript | Remove-SPOSiteScript
+Get-SPOSiteDesign | Remove-SPOSiteDesign
+Get-SPOSiteScript | Remove-SPOSiteScript
 
 ###Site Scripts###
 #Get the content of the JSON file and add it to the site script.
