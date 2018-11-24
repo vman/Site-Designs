@@ -1,5 +1,9 @@
-Register-SPOHubSite -Site https://vrdmn.sharepoint.com/sites/SampleHub -Principals $null
+###Authenticaiton###
+$userCredential = Get-StoredCredential -Target "vrdmn.sharepoint.com"
+Connect-SPOService -Url "https://vrdmn-admin.sharepoint.com" -Credential $userCredential
 
-$hubSiteDesign = Get-SPOSiteDesign | Where-Object {$_.Title -eq "CnC Basic Communication Site"}
+Register-SPOHubSite -Site "https://vrdmn.sharepoint.com/sites/Events" -Principals $null
 
-Set-SPOHubSite -SiteDesignId $hubSiteDesign.ID -Identity "https://vrdmn.sharepoint.com/sites/SampleHub"
+$hubSiteDesign = Get-SPOSiteDesign | Where-Object {$_.Title -eq "CnC Event Site"}
+
+Set-SPOHubSite -SiteDesignId $hubSiteDesign.ID -Identity "https://vrdmn.sharepoint.com/sites/Events"

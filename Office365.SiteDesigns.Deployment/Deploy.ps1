@@ -28,6 +28,11 @@ $siteScriptJoinToHub = Add-SPOSiteScript -Title "CnC Join to Hub" -Description "
 $siteScriptSharingContent = Get-Content 'SiteScripts\site-script-externalSharing.json' -Raw 
 $siteScriptSharing = Add-SPOSiteScript -Title "CnC External Sharing" -Description "Join site to Hub" -Content $siteScriptSharingContent
 
+$siteScriptNavContent = Get-Content 'SiteScripts\site-script-navigation.json' -Raw 
+$siteScriptNav = Add-SPOSiteScript -Title "Event Site" -Description "" -Content $siteScriptNavContent
+
+$siteScriptEventListContent = Get-Content 'SiteScripts\site-script-events.json' -Raw 
+$siteScriptEventList = Add-SPOSiteScript -Title "Event Site" -Description "" -Content $siteScriptEventListContent
 
 ###Site Designs###
 #Create a basic site design only using the lists and theme site script.
@@ -39,5 +44,7 @@ Add-SPOSiteDesign -Title "CnC Basic Communication site" -WebTemplate "68" -SiteS
 Add-SPOSiteDesign -Title "CnC Advanced Communication site" -WebTemplate "68" -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID, $siteScriptTriggerFlow.ID -Description "CnC advanced communication site" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
 
 Add-SPOSiteDesign -Title "CnC Department site" -WebTemplate "68" -SiteScripts $siteScriptJoinToHub.ID -Description "Department site will be joined to Hub" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
+
+Add-SPOSiteDesign -Title "CnC Event site" -WebTemplate "68" -SiteScripts $siteScriptEventList.ID, $siteScriptNav.ID -Description "Event site" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
 
 

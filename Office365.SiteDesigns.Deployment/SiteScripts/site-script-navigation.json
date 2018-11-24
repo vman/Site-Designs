@@ -1,0 +1,13 @@
+{
+    "$schema": "schema.json",
+    "actions": [
+        {
+            "verb": "addNavLink",
+            "url": "/Event Collateral",
+            "displayName": "Event Collateral",
+            "isWebRelative": true
+         }
+    ],
+    "bindata": {},
+    "version": 1
+  }

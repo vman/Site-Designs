@@ -1,0 +1,18 @@
+{
+    "$schema": "schema.json",
+    "actions": [
+      {
+        "verb": "createSPList",
+        "listName": "Event Collateral",
+        "templateType": 101,
+        "subactions": [
+          {
+            "verb": "SetDescription",
+            "description": "Holds event documents"
+          }
+        ]
+      }
+    ],
+    "bindata": {},
+    "version": 1
+  }
