@@ -4,4 +4,4 @@ Connect-SPOService -Url "https://vrdmn-admin.sharepoint.com" -Credential $userCr
 
 $siteDesignToApply = Get-SPOSiteDesign | Where-Object {$_.Title -eq "CnC Basic Communication Site"}
 
-Invoke-SPOSiteDesign -Identity $siteDesignToApply.Id -WebUrl "https://vrdmn.sharepoint.com/sites/ExistingSite"
+Invoke-SPOSiteDesign -Identity $siteDesignToApply.Id -WebUrl "https://vrdmn.sharepoint.com/sites/Test1/asubsite"

@@ -25,9 +25,6 @@ $siteScriptSPFx = Add-SPOSiteScript -Title "CnC SPFx Script" -Description "Adds 
 $siteScriptJoinToHubContent = Get-Content 'SiteScripts\site-script-joinToHub.json' -Raw 
 $siteScriptJoinToHub = Add-SPOSiteScript -Title "CnC Join to Hub" -Description "Join site to Hub" -Content $siteScriptJoinToHubContent
 
-$siteScriptSharingContent = Get-Content 'SiteScripts\site-script-externalSharing.json' -Raw 
-$siteScriptSharing = Add-SPOSiteScript -Title "CnC External Sharing" -Description "Join site to Hub" -Content $siteScriptSharingContent
-
 $siteScriptNavContent = Get-Content 'SiteScripts\site-script-navigation.json' -Raw 
 $siteScriptNav = Add-SPOSiteScript -Title "Event Site" -Description "" -Content $siteScriptNavContent
 
@@ -36,9 +33,9 @@ $siteScriptEventList = Add-SPOSiteScript -Title "Event Site" -Description "" -Co
 
 ###Site Designs###
 #Create a basic site design only using the lists and theme site script.
-Add-SPOSiteDesign -Title "CnC Office 365 Group site" -WebTemplate "64" -IsDefault -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID, $siteScriptSharing.ID -Description "CnC custom site connected to Office 365 Group" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png" -PreviewImageAltText "CnC custom site logo"
+Add-SPOSiteDesign -Title "CnC Office 365 Group site" -WebTemplate "64" -IsDefault -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID -Description "CnC custom site connected to Office 365 Group" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png" -PreviewImageAltText "CnC custom site logo"
 
-Add-SPOSiteDesign -Title "CnC Basic Communication site" -WebTemplate "68" -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID, $siteScriptSPFx.ID, $siteScriptSharing.ID -Description "CnC basic communication site" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
+Add-SPOSiteDesign -Title "CnC Basic Communication site" -WebTemplate "68" -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID, $siteScriptSPFx.ID -Description "CnC basic communication site" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
 
 #Create an advanced site design by using the theme, lists and flow site scripts
 Add-SPOSiteDesign -Title "CnC Advanced Communication site" -WebTemplate "68" -SiteScripts $siteScriptTheme.ID, $siteScriptList.ID, $siteScriptTriggerFlow.ID -Description "CnC advanced communication site" -PreviewImageUrl "https://vrdmn.sharepoint.com/SiteAssets/cncsitepreview.png"
